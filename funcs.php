@@ -5,9 +5,9 @@ function h($str){
     return htmlspecialchars($str, ENT_QUOTES);
 }
 
-function db_conn(){
+function db_con(){
     try {
-        $pdo = new PDO('mysql:dbname=gs_db;charset=utf8;host=localhost','root','');
+        $pdo = new PDO('mysql:dbname=gs_db3;charset=utf8;host=localhost','root','');
         return $pdo;
     } catch (PDOException $e) {
         exit('DB-Connection-Error:'.$e->getMessage());
